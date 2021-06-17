@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    position: relative;
+    border-radius: 15px;
+    background-color: white;
+    width: 35%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+
+}
+.content::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    background-color: #E88F09;
+    height: 100%;
+    width: 40%;
+    z-index: 10;
+    border-left-color: rgb(0 0 0 / 10%);
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+
+.title {
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #E88F09;
+}
+
+.description{
+    font-size: 15px;
+    color: gray;
+}
+.description-primary{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.logo-social-media{
+  font-size: 30px;
+  margin-right: 9px;
+}
+
+.btn {
+    color: #fff;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px 30px;
+    font-weight: bold;
+    width: 190px;
+    align-self: center;
+}
+.btn-login{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.btn-register {
+    background-color: transparent;
+    color: #E88F09;
+    border: 1px solid #E88F09;
+}
+.btn-register:hover {
+    background-color: #E88F09;
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: white;
+    color: #E88F09;
+}
+.first-content {
+    display: flex;
+}
+
+.first-element{
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.second-element{
+    line-height: 30px;
+    text-align: center;
+    z-index: 11;
+    flex: 1 0 auto;
+}
+.second-content {
+    position: absolute;
+    display: none;
+}
+
+.social-media-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input{
+    border: none;
+    border-radius: 8px;
+    background-color: #E8DCDA;
+    margin: 8px;
+    height: 40px;
+
+}
+
+.form input::placeholder{
+    padding-left: 10px;
+    font-size: 15px;
+}
