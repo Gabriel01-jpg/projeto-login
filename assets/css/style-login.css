@@ -3,6 +3,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+
 * {
     padding: 0;
     margin: 0;
@@ -30,7 +31,6 @@ body{
 .content::before{
     content: '';
     position: absolute;
-    right: 0;
     background-color: #E88F09;
     height: 100%;
     width: 40%;
@@ -38,6 +38,8 @@ body{
     border-left-color: rgb(0 0 0 / 10%);
     border-left-style: solid;
     border-left-width: 1px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .title {
@@ -74,11 +76,38 @@ body{
 .btn-login{
     background-color: transparent;
     border: 1px solid #fff;
+    transition: background-color 0.8s;;
 }
 .btn-register {
     background-color: transparent;
     color: #E88F09;
     border: 1px solid #E88F09;
+    transition: background-color 0.8s;
+}
+
+.btn-signin {
+    border: 1px solid #E88F09;
+    background-color: transparent;
+    color: #E88F09;
+    margin-top: 20px;
+    transition: background-color 0.8s;
+}
+
+.btn-cadastrar {
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color 0.8s;
+}
+
+.btn-cadastrar:hover{
+    background-color: white;
+    color: #E88F09;
+}
+.btn-signin:hover {
+    background-color: #E88F09;
+    color: white;
+    border: none;
+
 }
 .btn-register:hover {
     background-color: #E88F09;
@@ -109,12 +138,35 @@ body{
 }
 .second-content {
     position: absolute;
-    display: none;
+    display: flex;
+}
+.second-content .first-element{
+    order: 2;
+}
+
+.second-content .second-element{
+    order: 1;
+}
+.first-content .first-element {
+    z-index: -1;
+}
+.first-content .second-element {
+    z-index: -1;
 }
 
 .social-media-list {
     display: flex;
     list-style-type: none;
+}
+
+.social-media-list a {
+    cursor: pointer;
+    color: gray;
+    transition: color 0.5s;
+}
+
+.social-media-list a:hover {
+    color: #000;
 }
 
 .form{
@@ -135,4 +187,97 @@ body{
 .form input::placeholder{
     padding-left: 10px;
     font-size: 15px;
+}
+.forget-password {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.forget-password:hover{
+    text-decoration: underline;
+}
+
+/* Inserir essa classe dentro de body pra aparecer o primeiro conteudo*/
+.register-js .second-content .first-element, .register-js .second-content .second-element{
+    z-index: -1;
+
+}
+
+.register-js .first-content .first-element{
+    z-index: 11;
+}
+
+.register-js .first-content .second-element{
+    z-index: 13;
+}
+
+.register-js .content::before{
+    right: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 1.5s;
+    z-index: 12;
+}
+
+/* Inserir essa classe dentro de body pra aparecer o segundo conteudo*/
+
+.sign-in-js .first-content .first-element, .sign-in-js .first-content .second-element{
+    z-index: -1;
+}
+
+.sign-in-js .second-content .first-element{
+    z-index: 11;
+}
+.sign-in-js .second-content .second-element{
+    z-index: 13;
+}
+
+.sign-in-js .content::before{
+    z-index: 12;
+    animation: slideout 1.5s;
+}
+
+/* Animação da troca de tela */
+
+@keyframes slidein {
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    50% {
+        left: 40%;
+        width: 40%;
+    }
+
+    75% {
+        left: 60%;
+        width: 40%;
+    }
+
+    to {
+        right: 0;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+    from {
+        right: 0;
+        width: 40%;
+    }
+
+    50% {
+        right: 40%;
+        width: 45%;
+    }
+
+    to {
+        right: 60%;
+        width: 40%;
+    }
 }
